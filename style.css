@@ -1,0 +1,33 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: rgb(232, 100, 5);
+    border-bottom: 5px solid black;
+    color: #ececec;
+    padding: 0.5rem 15%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+img {
+    width: 200px;
+}
+
+form input,
+form label,
+form textarea {
+  box-sizing: border-box;
+  display: block;
+  margin: 5px 0;
+  width: 85%;
+}
