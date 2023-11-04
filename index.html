@@ -11,5 +11,35 @@
     <header>
       <h1>Hose B Hardware Parts</h1>
     </header>
+
+    <main>
+        <section class="new-item-entry">
+          <h2>Add Item To Inventory</h2>
+          <form id="new-item">
+            <label for="item-name"
+              >Item Name<input id="item-name" name="item-name" type="text" required
+            /></label>
+  
+            <label for="new-manu"
+              >Manufacturer<input id="manu" name="manu" type="text" required/>
+            </label>
+  
+            <label for="item-image"
+              >Image URL
+              <input id="image" name="image" type="url" required/>
+            </label>
+  
+            <label for="stock">In Stock
+              <select id="stock" name="stock" required>
+                <option value="">--Select--</option>
+                <option value="in-stock">In Stock</option>
+                <option value="out-stock">Out Of Stock</option>
+              </select>
+            </label>
+  
+            <button type="submit">Add Item To Inventory</button>
+          </form>
+        </section>
+      </main>
 </body>
 </html>
