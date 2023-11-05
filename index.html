@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hardware Store Application</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <script defer src="./scripts/helper.js"></script>
     <script defer src="./scripts/main.js"></script>
 </head>
 <body>
@@ -17,7 +18,7 @@
           <h2>Add Item To Inventory</h2>
           <form id="new-item">
             <label for="item-name"
-              >Item Name<input id="item-name" name="item-name" type="text" required
+              >Item Name<input id="name" name="name" type="text" required
             /></label>
   
             <label for="new-manu"
@@ -28,44 +29,58 @@
               >Image URL
               <input id="image" name="image" type="url" required/>
             </label>
-  
-            <label for="stock">In Stock
+
+            <label for="item-price"
+              >Price
+              <input id="price" name="price" type="number" required/>
+            </label>
+            
+            <label for="item-date"
+              >Order Date
+              <input id="date" name="date" type="date" required/>
+            </label>
+
+            <label for="item-stock">In Stock
               <select id="stock" name="stock" required>
                 <option value="">--Select--</option>
                 <option value="in-stock">In Stock</option>
                 <option value="out-stock">Out Of Stock</option>
               </select>
             </label>
-  
             <button type="submit">Add Item To Inventory</button>
+            <button type="reset">Reset Form</button>
+            
           </form>
         </section>
         <section class="current-inventory">
           <h2>Current Inventory</h2>
           <ul>
             <li class="single-item">
-              <h3><img src="https://dogutool.com/cdn/shop/products/000000022797_0BJRxcu.jpg?v=1675525578" alt="Makita Impact Driver"></h3>
+              <h3><img src="https://dogutool.com/cdn/shop/products/000000022797_0BJRxcu.jpg?v=1675525578"></h3>
               <p><strong>Item Name</strong>: Cordless Impact Driver</p>
               <p><strong>Manufacturer</strong>: Makita</p>
               <p><strong>Price</strong>: $350</p>
-              <p><strong>In Stock</strong>: <button>In Stock</button></p>
-              <button>Remove Item</button>
+              <p><strong>Order Date</strong>: 2023-12-06</p>
+              <button class="stock-check">Out Of Stock</button>
+              <button class="remove-item">Remove Item</button>
             </li>
             <li class="single-item">
-                <h3><img src="https://cdn.mscdirect.com/global/images/ProductImages/6982059AA-21.jpg" alt="Makita Impact Driver"></h3>
+                <h3><img src="https://cdn.mscdirect.com/global/images/ProductImages/6982059AA-21.jpg"></h3>
                 <p><strong>Item Name</strong>: Cordless Circular Saw</p>
                 <p><strong>Manufacturer</strong>: Dewalt</p>
                 <p><strong>Price</strong>: $150</p>
-                <p><strong>In Stock</strong>: <button>In Stock</button></p>
-                <button>Remove Item</button>
+                <p><strong>Order Date</strong>: 2023-07-05</p>
+                <button class="stock-check">In Stock</button>
+                <button class="remove-item">Remove Item</button>
               </li>
               <li class="single-item">
-                <h3><img src="https://www.threadsforthesouth.com/includes/work/image_cache/webp/df6dbd382dee14f0d4cf238e55a6aa53.thumb.webp" alt="Makita Impact Driver"></h3>
+                <h3><img src="https://www.threadsforthesouth.com/includes/work/image_cache/webp/df6dbd382dee14f0d4cf238e55a6aa53.thumb.webp"></h3>
                 <p><strong>Item Name</strong>: Cordless Sawzall</p>
                 <p><strong>Manufacturer</strong>: Milwaukee</p>
                 <p><strong>Price</strong>: $200</p>
-                <p><strong>In Stock</strong>: <button>Out Of Stock</button></p>
-                <button>Remove Item</button>
+                <p><strong>Order Date</strong>: 2023-02-03</p>
+                <button class="stock-check">Out Of Stock</button>
+                <button class="remove-item">Remove Item</button>
               </li>
           </ul>
         </section>
