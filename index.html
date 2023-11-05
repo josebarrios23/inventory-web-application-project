@@ -10,50 +10,12 @@
 </head>
 <body>
     <header>
-      <h1>Hose B Hardware Parts</h1>
+      <h1>Hose B Hardware Store</h1>
     </header>
 
     <main>
-        <section class="new-item-entry">
-          <h2>Add Item To Inventory</h2>
-          <form id="new-item">
-            <label for="item-name"
-              >Item Name<input id="name" name="name" type="text" required
-            /></label>
-  
-            <label for="new-manu"
-              >Manufacturer<input id="manu" name="manu" type="text" required/>
-            </label>
-  
-            <label for="item-image"
-              >Image URL
-              <input id="image" name="image" type="url" required/>
-            </label>
-
-            <label for="item-price"
-              >Price
-              <input id="price" name="price" type="number" required/>
-            </label>
-            
-            <label for="item-date"
-              >Order Date
-              <input id="date" name="date" type="date" required/>
-            </label>
-
-            <label for="item-stock">In Stock
-              <select id="stock" name="stock" required>
-                <option value="">--Select--</option>
-                <option value="in-stock">In Stock</option>
-                <option value="out-stock">Out Of Stock</option>
-              </select>
-            </label>
-            <button type="submit">Add Item To Inventory</button>
-            <button type="reset">Reset Form</button>
-            
-          </form>
-        </section>
         <section class="current-inventory">
-          <h2>Current Inventory</h2>
+          <h2>CURRENT INVENTORY</h2>
           <ul>
             <li class="single-item">
               <h3><img src="https://dogutool.com/cdn/shop/products/000000022797_0BJRxcu.jpg?v=1675525578"></h3>
@@ -84,6 +46,46 @@
               </li>
           </ul>
         </section>
+        <section class="new-item-entry">
+            <h2>ADD ITEM TO INVENTORY</h2>
+            <form id="new-item">
+              <label for="item-name"
+                >Item Name<input id="name" name="name" type="text" required
+              /></label>
+    
+              <label for="new-manu"
+                >Manufacturer<input id="manu" name="manu" type="text" required/>
+              </label>
+    
+              <label for="item-image"
+                >Image URL
+                <input id="image" name="image" type="url"/>
+              </label>
+  
+              <label for="item-price"
+                >Price
+                <input id="price" name="price" type="number" required/>
+              </label>
+              
+              <label for="item-date"
+                >Order Date
+                <input id="date" name="date" type="date" required/>
+              </label>
+  
+              <label for="item-stock">In Stock
+                <select id="stock" name="stock" required>
+                  <option value="">--Select--</option>
+                  <option value="in-stock">In Stock</option>
+                  <option value="out-stock">Out Of Stock</option>
+                </select>
+              </label>
+              <div>
+              <button id="submit" type="submit">Add Item To Inventory</button>
+              <button id="reset" type="reset">Reset Form</button>
+              </div>
+              
+            </form>
+          </section>
       </main>
 </body>
 </html>

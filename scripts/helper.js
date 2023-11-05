@@ -14,9 +14,14 @@ function itemTemplate(name, manu, price, image, date, stock) {
     event.target.closest(".single-item").remove()
   })
 
-  if (name && manu && price && image && date && stock) {
+  if (name && manu && price && date && stock) {
     
-    li.innerHTML = `<h3><img src="${image}" alt="${name} ${manu}" ></h3>
+    let placeHolder = image
+    if (!image){
+      placeHolder = "./hoseb.png"
+    }
+
+    li.innerHTML = `<h3><img src="${placeHolder}" alt="${name} ${manu}" ></h3>
     <p><strong>Item Name</strong>: ${name}</p>
     <p><strong>Manufacturer</strong>: ${manu}</p>
     <p><strong>Price</strong>: $${price}</p>
