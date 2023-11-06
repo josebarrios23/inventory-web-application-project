@@ -90,3 +90,10 @@ form textarea {
   margin: 5px 0;
   width: 100%;
 }
+
+footer {
+    color: white;
+    text-align: center;
+    background-color: black;
+    height: 60px;
+}
