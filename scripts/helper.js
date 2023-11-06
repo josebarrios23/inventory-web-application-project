@@ -2,8 +2,6 @@ function generateNewItem(name, manu, price, image, date, stock) {
   const li = itemTemplate(name, manu, price, image, date, stock)
   const ul = document.querySelector("ul")
   ul.prepend(li)
-
-  form.reset()
 }
 
 function itemTemplate(name, manu, price, image, date, stock) {
@@ -17,32 +15,31 @@ function itemTemplate(name, manu, price, image, date, stock) {
   })
 
   if (name && manu && price && date && stock) {
-    
     let placeHolder = image
-    if (!image){
+    if (!image) {
       placeHolder = "./hoseb.png"
     }
 
-    li.innerHTML = `<h3><img src="${placeHolder}" alt="${name} ${manu}" ></h3>
+    li.innerHTML = `<h3><img src="${placeHolder}" alt="${name} ${manu}"></h3>
     <p><strong>Item Name</strong>: ${name}</p>
     <p><strong>Manufacturer</strong>: ${manu}</p>
     <p><strong>Price</strong>: $${price}</p>
     <p><strong>Order Date</strong>: ${date}</p>
     <button class="stock-check">${stock.options[stock.selectedIndex].textContent}</button>`
     li.append(removeButton)
-  
-    const stockButton = li.querySelector('.stock-check');
+
+    const stockButton = li.querySelector('.stock-check')
     if (stockButton.textContent === 'In Stock') {
-      stockButton.classList.add('in-stock');
+      stockButton.classList.add('in-stock')
     } else if (stockButton.textContent === 'Out Of Stock') {
-      stockButton.classList.add('out-stock');
+      stockButton.classList.add('out-stock')
     }
   }
 
-  return li;
+  return li
 }
 
-const listItems = document.querySelectorAll("li .remove-item")
+const listItems = document.querySelectorAll(".remove-item")
 for (item of listItems) {
   item.addEventListener("click", (event) => {
     event.target.closest(".single-item").remove()
@@ -52,15 +49,16 @@ for (item of listItems) {
 const itemInventory = document.querySelector("ul")
 
 itemInventory.addEventListener("click", (event) => {
-  if (event.target.classList.contains("stock-check")) {
-    if (event.target.textContent === "In Stock") {
-      event.target.textContent = "Out Of Stock"
-      event.target.style.color = "red"
-      event.target.style.backgroundColor = "gray"
-    } else if (event.target.textContent === "Out Of Stock") {
-      event.target.textContent = "In Stock"
-      event.target.style.color = "green"
-      event.target.style.backgroundColor = "white"
+  let button = event.target
+  if (button.classList.contains("stock-check")) {
+    if (button.textContent === "In Stock") {
+      button.textContent = "Out Of Stock"
+      button.style.color = "red"
+      button.style.backgroundColor = "gray"
+    } else if (button.textContent === "Out Of Stock") {
+      button.textContent = "In Stock"
+      button.style.color = "green"
+      button.style.backgroundColor = "white"
     }
   }
 })
