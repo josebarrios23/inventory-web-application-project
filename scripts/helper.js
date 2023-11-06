@@ -2,6 +2,8 @@ function generateNewItem(name, manu, price, image, date, stock) {
   const li = itemTemplate(name, manu, price, image, date, stock)
   const ul = document.querySelector("ul")
   ul.prepend(li)
+
+  form.reset()
 }
 
 function itemTemplate(name, manu, price, image, date, stock) {
@@ -28,9 +30,16 @@ function itemTemplate(name, manu, price, image, date, stock) {
     <p><strong>Order Date</strong>: ${date}</p>
     <button class="stock-check">${stock.options[stock.selectedIndex].textContent}</button>`
     li.append(removeButton)
+  
+    const stockButton = li.querySelector('.stock-check');
+    if (stockButton.textContent === 'In Stock') {
+      stockButton.classList.add('in-stock');
+    } else if (stockButton.textContent === 'Out Of Stock') {
+      stockButton.classList.add('out-stock');
+    }
   }
 
-  return li
+  return li;
 }
 
 const listItems = document.querySelectorAll("li .remove-item")

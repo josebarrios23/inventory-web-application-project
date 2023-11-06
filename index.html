@@ -10,9 +10,11 @@
 </head>
 <body>
     <header>
-      <h1>Hose B Hardware Store</h1>
+        <img src="hoseb.png" alt="hose b logo"> 
+        <h1>
+          Hose B Hardware Store
+      </h1>
     </header>
-
     <main>
         <section class="current-inventory">
           <h2>CURRENT INVENTORY</h2>
@@ -23,7 +25,7 @@
               <p><strong>Manufacturer</strong>: Makita</p>
               <p><strong>Price</strong>: $350</p>
               <p><strong>Order Date</strong>: 2023-12-06</p>
-              <button class="stock-check">Out Of Stock</button>
+              <button class="stock-check out-stock">Out Of Stock</button>
               <button class="remove-item">Remove Item</button>
             </li>
             <li class="single-item">
@@ -32,7 +34,7 @@
                 <p><strong>Manufacturer</strong>: Dewalt</p>
                 <p><strong>Price</strong>: $150</p>
                 <p><strong>Order Date</strong>: 2023-07-05</p>
-                <button class="stock-check">In Stock</button>
+                <button class="stock-check in-stock">In Stock</button>
                 <button class="remove-item">Remove Item</button>
               </li>
               <li class="single-item">
@@ -41,7 +43,7 @@
                 <p><strong>Manufacturer</strong>: Milwaukee</p>
                 <p><strong>Price</strong>: $200</p>
                 <p><strong>Order Date</strong>: 2023-02-03</p>
-                <button class="stock-check">Out Of Stock</button>
+                <button class="stock-check out-stock">Out Of Stock</button>
                 <button class="remove-item">Remove Item</button>
               </li>
           </ul>
@@ -81,7 +83,7 @@
               </label>
               <div>
               <button id="submit" type="submit">Add Item To Inventory</button>
-              <button id="reset" type="reset">Reset Form</button>
+              <button id="reset-button" type="reset">Reset Form</button>
               </div>
               
             </form>

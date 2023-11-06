@@ -18,6 +18,12 @@ header {
     grid-template-columns: 1fr;
 }
 
+header img {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+}
+
 h1 {
     font-family: "Bungee Outline";
 }
@@ -29,6 +35,10 @@ h2 {
 main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: monospace;
+    font-size: 18px;
 }
 
 ul {
@@ -54,6 +64,21 @@ button {
 
 div {
     text-align: center;
+}
+
+.in-stock {
+  background-color: white;
+  color: green;
+}
+
+/* Style for "Out Of Stock" */
+.out-stock {
+  background-color: gray;
+  color: red;
+}
+
+#stock {
+    position: absolute;
 }
 
 form input,
