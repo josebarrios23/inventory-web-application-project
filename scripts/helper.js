@@ -21,10 +21,10 @@ function itemTemplate(name, manu, price, image, date, stock) {
     }
 
     li.innerHTML = `<h3><img src="${placeHolder}" alt="${name} ${manu}"></h3>
-    <p><strong>Item Name</strong>: ${name}</p>
-    <p><strong>Manufacturer</strong>: ${manu}</p>
-    <p><strong>Price</strong>: $${price}</p>
-    <p><strong>Order Date</strong>: ${date}</p>
+    <p><span class="bold">Item Name</span >: ${name}</p>
+    <p><span class="bold">Manufacturer</span >: ${manu}</p>
+    <p><span class="bold">Price</span >: $${price}</p>
+    <p><span class="bold">Order Date</span >: ${date}</p>
     <button class="stock-check">${stock.options[stock.selectedIndex].textContent}</button>`
     li.append(removeButton)
 
